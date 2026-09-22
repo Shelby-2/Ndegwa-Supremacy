@@ -638,7 +638,7 @@ body::before {
     font-weight: 700;
 }
 
-.footer-links {
+.social-links {
     display: flex;
 
     justify-content: center;
@@ -646,20 +646,36 @@ body::before {
     gap: 25px;
 }
 
-.footer-links a {
-    font-size: 10px;
+.social-links a {
+    font-size: 24px;
 
-    letter-spacing: 1px;
+    color: #ffffff;
 
-    text-transform: uppercase;
-
-    color: #777777;
-
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: #ffffff;
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.social-links a[aria-label*="Instagram"]:hover {
+    color: #E4405F;
+}
+
+.social-links a[aria-label*="WhatsApp"]:hover {
+    color: #25D366;
+}
+
+.instagram-icon {
+    font-size: 28px;
+
+    color: #E4405F;
+
+    text-decoration: none;
+}
+
+.instagram-icon:hover {
+    opacity: 0.8;
 }
 
 .copyright {
