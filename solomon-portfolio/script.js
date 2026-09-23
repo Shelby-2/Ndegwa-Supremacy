@@ -236,6 +236,60 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    /* =====================================
+       8. BOOKING FORM HANDLER
+    ===================================== */
+
+    const bookingForm = document.querySelector("#bookingForm");
+
+    if (bookingForm) {
+
+        const bookingDate = document.querySelector("#bookingDate");
+
+        // Prevent clients from selecting a date in the past
+        if (bookingDate) {
+            const today = new Date();
+
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, "0");
+            const day = String(today.getDate()).padStart(2, "0");
+
+            bookingDate.min = `${year}-${month}-${day}`;
+        }
+
+        bookingForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            const formData = new FormData(bookingForm);
+
+            const booking = {
+                clientName: formData.get("clientName"),
+                clientEmail: formData.get("clientEmail"),
+                clientPhone: formData.get("clientPhone"),
+                company: formData.get("company"),
+                activity: formData.get("activity"),
+                bookingDate: formData.get("bookingDate"),
+                bookingTime: formData.get("bookingTime"),
+                location: formData.get("location"),
+                message: formData.get("message")
+            };
+
+            console.log("Booking request:", booking);
+
+            alert(
+                `Thank you ${booking.clientName}. ` +
+                `Your request has been received. ` +
+                `I will contact you personally to confirm availability.`
+            );
+
+            bookingForm.reset();
+
+        });
+
+    }
+
+
     console.log(
         "Solomon Ndegwa Njuguna — Portfolio loaded."
     );

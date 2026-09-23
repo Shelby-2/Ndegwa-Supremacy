@@ -475,6 +475,54 @@ body::before {
 
 
 /* =========================================
+   MODEL DETAILS
+========================================= */
+
+.model-details {
+    margin-top: 55px;
+    padding-top: 30px;
+    border-top: 1px solid #292929;
+}
+
+.details-label {
+    margin-bottom: 28px;
+    color: #777;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.detail-item {
+    padding: 22px 0;
+    border-bottom: 1px solid #292929;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-item span {
+    color: #777;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.detail-item strong {
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+
+/* =========================================
    PORTFOLIO — EDITORIAL GALLERY
 ========================================= */
 
@@ -756,6 +804,14 @@ body::before {
         font-size: 22px;
     }
 
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-item {
+        padding: 20px 0;
+    }
+
     .portfolio-heading {
         display: block;
     }
@@ -801,6 +857,856 @@ body::before {
 
     .copyright {
         text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   BOOKING
+========================================= */
+
+.booking {
+    background: #080808;
+
+    color: #f5f5f5;
+
+    padding: 140px 8vw;
+}
+
+.booking-header {
+    max-width: 900px;
+
+    margin-bottom: 90px;
+}
+
+.booking-header h2 {
+    font-size: clamp(3rem, 7vw, 7rem);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+
+    margin: 20px 0 35px;
+}
+
+.booking-header h2 em {
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+}
+
+.booking-intro {
+    max-width: 560px;
+
+    color: #999;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* FORM */
+
+.booking-form {
+    max-width: 1000px;
+}
+
+.form-section {
+    padding: 55px 0;
+
+    border-top: 1px solid #292929;
+}
+
+.form-label {
+    margin-bottom: 35px;
+
+    color: #777;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.18em;
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+.form-group label span {
+    color: #666;
+
+    text-transform: none;
+
+    letter-spacing: 0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #333;
+
+    background: #101010;
+
+    color: #f5f5f5;
+
+    padding: 18px 20px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 160px;
+}
+
+.form-group select {
+    appearance: none;
+
+    cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #f5f5f5;
+
+    background: #141414;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #555;
+}
+
+
+/* SUBMIT */
+
+.booking-submit {
+    padding-top: 55px;
+
+    border-top: 1px solid #292929;
+}
+
+.booking-submit .btn {
+    border: none;
+
+    cursor: pointer;
+}
+
+.booking-note {
+    margin-top: 20px;
+
+    max-width: 500px;
+
+    color: #666;
+
+    font-size: 0.8rem;
+
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .booking {
+        padding: 100px 6vw;
+    }
+
+    .booking-header {
+        margin-bottom: 60px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .form-section {
+        padding: 40px 0;
+    }
+
+    .booking-header h2 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MASTER FIX
+   Phone → Tablet → Laptop → Full Desktop
+========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+    width: 100%;
+    padding-left: clamp(20px, 5vw, 80px);
+    padding-right: clamp(20px, 5vw, 80px);
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 45px);
+}
+
+.header .nav a {
+    white-space: nowrap;
+}
+
+
+/* ---------- MAIN CONTENT WIDTH ---------- */
+
+.hero-content,
+.about-content,
+.portfolio,
+.contact,
+.booking,
+.booking-form {
+    width: min(90%, 1400px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100svh;
+    width: 100%;
+}
+
+.hero-content {
+    min-height: 100svh;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 8vw, 9rem);
+    line-height: 0.9;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.hero-description {
+    max-width: 600px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about {
+    padding-top: clamp(80px, 10vw, 160px);
+    padding-bottom: clamp(80px, 10vw, 160px);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(40px, 8vw, 120px);
+    align-items: center;
+}
+
+.about-content > * {
+    min-width: 0;
+}
+
+.about-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* ---------- MODEL DETAILS ---------- */
+
+.model-details {
+    width: 100%;
+}
+
+.details-grid {
+    width: 100%;
+}
+
+
+/* ---------- PORTFOLIO ---------- */
+
+.portfolio {
+    padding-top: clamp(80px, 10vw, 160px);
+    padding-bottom: clamp(80px, 10vw, 160px);
+}
+
+.portfolio-grid {
+    width: 100%;
+}
+
+.portfolio-item {
+    min-width: 0;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    padding-top: clamp(80px, 10vw, 160px);
+    padding-bottom: clamp(80px, 10vw, 160px);
+}
+
+.contact h2 {
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.95;
+    overflow-wrap: break-word;
+}
+
+
+/* ---------- BOOKING ---------- */
+
+.booking {
+    padding-top: clamp(80px, 10vw, 160px);
+    padding-bottom: clamp(80px, 10vw, 160px);
+}
+
+.booking-header h2 {
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.95;
+    overflow-wrap: break-word;
+}
+
+.booking-form {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.form-grid {
+    min-width: 0;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .header .nav {
+        gap: 22px;
+    }
+
+    .about-content {
+        gap: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header {
+        padding: 18px 20px;
+    }
+
+    .header .nav {
+        gap: 14px;
+    }
+
+    .header .nav a {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+
+    .hero-content {
+        min-height: auto;
+        width: 88%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+        line-height: 0.88;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-content img {
+        width: 100%;
+        max-height: 650px;
+        object-fit: cover;
+    }
+
+
+    /* ---------- MODEL DETAILS ---------- */
+
+    .model-details {
+        margin-top: 40px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-item {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .detail-item span {
+        flex: 1;
+        min-width: 0;
+
+        color: #777;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .detail-item strong {
+        flex: 0 0 auto;
+        max-width: 55%;
+
+        color: #f5f5f5;
+        font-size: 0.95rem;
+        font-weight: 400;
+
+        text-align: right;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- PORTFOLIO ---------- */
+
+    .portfolio {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .contact h2 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+
+    /* ---------- BOOKING ---------- */
+
+    .booking {
+        width: 100%;
+        padding: 90px 6%;
+        box-sizing: border-box;
+    }
+
+    .booking-header {
+        margin-bottom: 55px;
+    }
+
+    .booking-header h2 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .booking-intro {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .booking-form {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .form-section {
+        padding: 40px 0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 17px 16px;
+    }
+
+    .form-group textarea {
+        min-height: 140px;
+    }
+
+    .booking-submit {
+        padding-top: 40px;
+    }
+
+    .booking-submit .btn {
+        width: 100%;
+        min-height: 52px;
+    }
+
+
+    /* ---------- SOCIAL LINKS ---------- */
+
+    .social-links {
+        gap: 14px;
+    }
+
+    .social-links a {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header .nav {
+        gap: 10px;
+    }
+
+    .header .nav a {
+        font-size: 0.6rem;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .booking {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .hero-content,
+    .about-content,
+    .portfolio,
+    .contact,
+    .booking {
+        width: min(88%, 1500px);
+    }
+
+    .hero h1 {
+        font-size: clamp(6rem, 8vw, 10rem);
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================================
+   MODEL DETAILS — FINAL RESPONSIVE VERSION
+========================================================= */
+
+.model-details {
+    width: 100%;
+    margin-top: 55px;
+    padding-top: 30px;
+    border-top: 1px solid #292929;
+}
+
+.details-label {
+    margin: 0 0 28px;
+    color: #777;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+}
+
+.detail-item {
+    min-width: 0;
+    padding: 22px 25px 22px 0;
+    border-bottom: 1px solid #292929;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.detail-item span {
+    color: #777;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.detail-item strong {
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 700px) {
+
+    .model-details {
+        margin-top: 40px;
+        padding-top: 25px;
+    }
+
+    .details-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .detail-item {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+        padding: 19px 0;
+    }
+
+    .detail-item span {
+        flex: 1;
+        min-width: 0;
+
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        white-space: normal;
+    }
+
+    .detail-item strong {
+        flex: 0 0 auto;
+        max-width: 60%;
+
+        font-size: 0.9rem;
+        text-align: right;
+        white-space: nowrap;
+    }
+}
+
+
+/* ---------- VERY SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+
+    .detail-item {
+        gap: 10px;
+    }
+
+    .detail-item span {
+        font-size: 0.65rem;
+    }
+
+    .detail-item strong {
+        font-size: 0.82rem;
+        max-width: 58%;
     }
 
 }

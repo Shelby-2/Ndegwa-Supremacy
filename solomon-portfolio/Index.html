@@ -10,7 +10,10 @@
     <meta name="description"
           content="Solomon Ndegwa Njuguna — Male Model Portfolio">
 
-    <title>NDEGWA SUPREMACY | MODEL PORTFOLIO </title>
+    <title>NDEGWA SUPREMACY</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect"
@@ -45,19 +48,19 @@
 
         <nav class="nav" aria-label="Main navigation">
 
-            <a href="#home">Home</a>
+            <a href="#home">HOME</a>
 
-            <a href="#about">About</a>
+            <a href="#about">ABOUT</a>
 
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">PORTFOLIO</a>
 
-            <a href="#contact">Contact</a>
+            <a href="#contact">CONTACT</a>
+
+            <a href="#booking" class="nav-book">
+                BOOK ME
+            </a>
 
         </nav>
-
-        <a href="#contact" class="header-booking">
-            Book Me
-        </a>
 
     </header>
 
@@ -153,6 +156,31 @@
                         in the modeling world.
                     </p>
 
+                    <div class="model-details">
+
+                        <p class="details-label">MODEL DETAILS</p>
+
+                        <div class="details-grid">
+
+                            <div class="detail-item">
+                                <span>Height</span>
+                                <strong>5'9" / 175 cm</strong>
+                            </div>
+
+                            <div class="detail-item">
+                                <span>Clothing Size</span>
+                                <strong>XL</strong>
+                            </div>
+
+                            <div class="detail-item">
+                                <span>Shoe Size</span>
+                                <strong>EU 44</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                     <a href="#contact" class="text-link">
                         Let's work together ↗
                     </a>
@@ -235,7 +263,7 @@
         </section>
 
 
-        <!-- ================= BOOKING ================= -->
+        <!-- ================= CONTACT ================= -->
 
         <section class="contact section" id="contact">
 
@@ -254,10 +282,272 @@
                 and creative collaborations.
             </p>
 
-            <a href="mailto:solomonndgwanjuguna7@gmail.com"
-               class="button button-light">
-                Get In Touch ↗
+            <a href="#booking" class="button button-light">
+                Request a Booking ↗
             </a>
+
+        </section>
+
+
+        <!-- ================= BOOKING ================= -->
+
+        <section class="booking" id="booking">
+
+            <div class="booking-header">
+                <p class="section-eyebrow">04 / BOOKING</p>
+
+                <h2>
+                    Let's create
+                    <em>something great.</em>
+                </h2>
+
+                <p class="booking-intro">
+                    Send a request with your details and preferred date.
+                    I'll personally get back to you to confirm availability.
+                </p>
+            </div>
+
+
+            <form class="booking-form" id="bookingForm">
+
+                <!-- CLIENT DETAILS -->
+                <div class="form-section">
+
+                    <p class="form-label">01 / YOUR DETAILS</p>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="clientName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="clientName"
+                                name="clientName"
+                                placeholder="Your full name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="clientEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="clientEmail"
+                                name="clientEmail"
+                                placeholder="you@example.com"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="clientPhone">
+                                WhatsApp / Phone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="clientPhone"
+                                name="clientPhone"
+                                placeholder="07XXXXXXXX"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="company">
+                                Company / Brand
+                                <span>(Optional)</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="company"
+                                name="company"
+                                placeholder="Company or brand name"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVITY -->
+                <div class="form-section">
+
+                    <p class="form-label">02 / ACTIVITY</p>
+
+                    <div class="form-group">
+
+                        <label for="activity">
+                            What is the activity?
+                        </label>
+
+                        <select
+                            id="activity"
+                            name="activity"
+                            required
+                        >
+                            <option value="" disabled selected>
+                                Select an activity
+                            </option>
+
+                            <option value="Fashion Editorial">
+                                Fashion Editorial
+                            </option>
+
+                            <option value="Photoshoot">
+                                Photoshoot
+                            </option>
+
+                            <option value="Commercial Campaign">
+                                Commercial Campaign
+                            </option>
+
+                            <option value="Brand Campaign">
+                                Brand Campaign
+                            </option>
+
+                            <option value="Runway / Fashion Show">
+                                Runway / Fashion Show
+                            </option>
+
+                            <option value="Content Creation">
+                                Content Creation
+                            </option>
+
+                            <option value="Creative Collaboration">
+                                Creative Collaboration
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE & TIME -->
+                <div class="form-section">
+
+                    <p class="form-label">03 / DATE & TIME</p>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="bookingDate">
+                                Preferred Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="bookingDate"
+                                name="bookingDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="bookingTime">
+                                Preferred Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="bookingTime"
+                                name="bookingTime"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+                <div class="form-section">
+
+                    <p class="form-label">04 / LOCATION</p>
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Where will the activity take place?"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="form-section">
+
+                    <p class="form-label">05 / PROJECT DETAILS</p>
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Tell me about the activity
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell me about the project, duration, requirements, or anything else I should know."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <div class="booking-submit">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Send Booking Request
+                    </button>
+
+                    <p class="booking-note">
+                        Your request is not confirmed until I personally
+                        confirm the date with you.
+                    </p>
+
+                </div>
+
+            </form>
 
         </section>
 
